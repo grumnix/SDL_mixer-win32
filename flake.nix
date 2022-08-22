@@ -5,6 +5,14 @@
     tinycmmc.url = "github:grumbel/tinycmmc";
     tinycmmc.inputs.nixpkgs.follows = "nixpkgs";
 
+    libogg-win32.url = "github:grumnix/libogg-win32";
+    libogg-win32.inputs.nixpkgs.follows = "nixpkgs";
+    libogg-win32.inputs.tinycmmc.follows = "tinycmmc";
+
+    libvorbis-win32.url = "github:grumnix/libvorbis-win32";
+    libvorbis-win32.inputs.nixpkgs.follows = "nixpkgs";
+    libvorbis-win32.inputs.tinycmmc.follows = "tinycmmc";
+
     SDL-win32.url = "github:grumnix/SDL-win32";
     SDL-win32.inputs.nixpkgs.follows = "nixpkgs";
     SDL-win32.inputs.tinycmmc.follows = "tinycmmc";
@@ -13,8 +21,12 @@
     SDL_mixer_src.flake = false;
   };
 
-  outputs = { self, nixpkgs, tinycmmc, SDL-win32, SDL_mixer_src }:
+  outputs = { self, nixpkgs, tinycmmc, libogg-win32, libvorbis-win32, SDL-win32, SDL_mixer_src }:
     tinycmmc.lib.eachWin32SystemWithPkgs (pkgs:
+      let
+        libmikmod = (pkgs.libmikmod.overrideAttrs (oldAttrs: { buildInputs = [];
+                                                               meta = {}; }));
+      in
       {
         packages = rec {
           default = SDL_mixer;
@@ -24,6 +36,8 @@
             version = "1.2.12";
 
             src = SDL_mixer_src;
+
+            LIBMIKMOD_CONFIG = "${libmikmod}/bin/libmikmod-config";
 
             postPatch = ''
               # Fix undefined reference to WinMain@16 due to library ordering
@@ -38,6 +52,10 @@
 
             buildInputs = [
               SDL-win32.packages.${pkgs.system}.default
+
+              libogg-win32.packages.${pkgs.system}.default
+              libvorbis-win32.packages.${pkgs.system}.default
+              libmikmod
             ];
           };
         };
