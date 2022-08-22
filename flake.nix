@@ -47,6 +47,12 @@
                           '$(objects)/$(TARGET) $(SDL_CFLAGS) $(SDL_LIBS)'
             '';
 
+            postFixup = ''
+              ln -sfv ${libmikmod}/bin/*.dll $out/bin/
+              ln -sfv ${libogg-win32.packages.${pkgs.system}.default}/bin/*.dll $out/bin/
+              ln -sfv ${libvorbis-win32.packages.${pkgs.system}.default}/bin/*.dll $out/bin/
+            '';
+
             nativeBuildInputs = [
               pkgs.buildPackages.pkgconfig
             ];
