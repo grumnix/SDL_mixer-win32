@@ -63,6 +63,29 @@
         "type": "github"
       }
     },
+    "libmikmod-win32": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "tinycmmc": [
+          "tinycmmc"
+        ]
+      },
+      "locked": {
+        "lastModified": 1661173849,
+        "narHash": "sha256-AokyLoMvA5a6ZSFAiAtsAYLV/PyB5unRiNvZa64F6yY=",
+        "owner": "grumnix",
+        "repo": "libmikmod-win32",
+        "rev": "b5a8daa6331acc3035fc761d3c2e22e7d32acbbd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "libmikmod-win32",
+        "type": "github"
+      }
+    },
     "libogg-win32": {
       "inputs": {
         "libogg_src": "libogg_src",
@@ -158,6 +181,7 @@
       "inputs": {
         "SDL-win32": "SDL-win32",
         "SDL_mixer_src": "SDL_mixer_src",
+        "libmikmod-win32": "libmikmod-win32",
         "libogg-win32": "libogg-win32",
         "libvorbis-win32": "libvorbis-win32",
         "nixpkgs": "nixpkgs",

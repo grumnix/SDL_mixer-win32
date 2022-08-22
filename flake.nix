@@ -5,6 +5,10 @@
     tinycmmc.url = "github:grumbel/tinycmmc";
     tinycmmc.inputs.nixpkgs.follows = "nixpkgs";
 
+    libmikmod-win32.url = "github:grumnix/libmikmod-win32";
+    libmikmod-win32.inputs.nixpkgs.follows = "nixpkgs";
+    libmikmod-win32.inputs.tinycmmc.follows = "tinycmmc";
+
     libogg-win32.url = "github:grumnix/libogg-win32";
     libogg-win32.inputs.nixpkgs.follows = "nixpkgs";
     libogg-win32.inputs.tinycmmc.follows = "tinycmmc";
@@ -22,12 +26,8 @@
     SDL_mixer_src.flake = false;
   };
 
-  outputs = { self, nixpkgs, tinycmmc, libogg-win32, libvorbis-win32, SDL-win32, SDL_mixer_src }:
+  outputs = { self, nixpkgs, tinycmmc, libmikmod-win32, libogg-win32, libvorbis-win32, SDL-win32, SDL_mixer_src }:
     tinycmmc.lib.eachWin32SystemWithPkgs (pkgs:
-      let
-        libmikmod = (pkgs.libmikmod.overrideAttrs (oldAttrs: { buildInputs = [];
-                                                               meta = {}; }));
-      in
       {
         packages = rec {
           default = SDL_mixer;
@@ -38,7 +38,7 @@
 
             src = SDL_mixer_src;
 
-            LIBMIKMOD_CONFIG = "${libmikmod}/bin/libmikmod-config";
+            LIBMIKMOD_CONFIG = "${libmikmod-win32.packages.${pkgs.system}.default}/bin/libmikmod-config";
 
             postPatch = ''
               # Fix undefined reference to WinMain@16 due to library ordering
@@ -48,7 +48,7 @@
             '';
 
             postFixup = ''
-              ln -sfv ${libmikmod}/bin/*.dll $out/bin/
+              ln -sfv ${libmikmod-win32.packages.${pkgs.system}.default}/bin/*.dll $out/bin/
               ln -sfv ${libogg-win32.packages.${pkgs.system}.default}/bin/*.dll $out/bin/
               ln -sfv ${libvorbis-win32.packages.${pkgs.system}.default}/bin/*.dll $out/bin/
             '';
@@ -62,7 +62,7 @@
 
               libogg-win32.packages.${pkgs.system}.default
               libvorbis-win32.packages.${pkgs.system}.default
-              libmikmod
+              libmikmod-win32.packages.${pkgs.system}.default
             ];
           };
         };
