@@ -12,6 +12,7 @@
     libvorbis-win32.url = "github:grumnix/libvorbis-win32";
     libvorbis-win32.inputs.nixpkgs.follows = "nixpkgs";
     libvorbis-win32.inputs.tinycmmc.follows = "tinycmmc";
+    libvorbis-win32.inputs.libogg.follows = "libogg-win32";
 
     SDL-win32.url = "github:grumnix/SDL-win32";
     SDL-win32.inputs.nixpkgs.follows = "nixpkgs";
