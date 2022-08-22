@@ -73,11 +73,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1661173849,
-        "narHash": "sha256-AokyLoMvA5a6ZSFAiAtsAYLV/PyB5unRiNvZa64F6yY=",
+        "lastModified": 1661174590,
+        "narHash": "sha256-OO10Nqv9sbmoNp/ilOaryOIwav9zACv4+YVtCNijQ/4=",
         "owner": "grumnix",
         "repo": "libmikmod-win32",
-        "rev": "b5a8daa6331acc3035fc761d3c2e22e7d32acbbd",
+        "rev": "f93465373774b93652bc55c2229f090effdf2adf",
         "type": "github"
       },
       "original": {
