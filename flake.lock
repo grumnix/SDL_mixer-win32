@@ -27,6 +27,7 @@
     "SDL_mixer_src": {
       "flake": false,
       "locked": {
+        "lastModified": 1326664828,
         "narHash": "sha256-3e1DCX0S5VmVFs0eMcbN0O0zKbi3VJJ/7LGvEpQhgGc=",
         "type": "tarball",
         "url": "https://github.com/libsdl-org/SDL_mixer/archive/refs/tags/release-1.2.12.tar.gz"
@@ -53,11 +54,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1681202837,
-        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "lastModified": 1701680307,
+        "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
+        "rev": "4022d587cbbfd70fe950c1e2083a02621806a725",
         "type": "github"
       },
       "original": {
@@ -76,11 +77,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1661174590,
-        "narHash": "sha256-OO10Nqv9sbmoNp/ilOaryOIwav9zACv4+YVtCNijQ/4=",
+        "lastModified": 1687875902,
+        "narHash": "sha256-hn1nb034oy5a826z6xgEw053pYdIuts//qK6zwhAxcU=",
         "owner": "grumnix",
         "repo": "libmikmod-win32",
-        "rev": "f93465373774b93652bc55c2229f090effdf2adf",
+        "rev": "c4ff6de01bdb51e8ff776ef433ce7249581c42b3",
         "type": "github"
       },
       "original": {
@@ -100,11 +101,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1660923789,
-        "narHash": "sha256-+DPxwLvI7MtJEeUUEn5xOHmZjttCuiJjZ+0bgxy3by0=",
+        "lastModified": 1687870894,
+        "narHash": "sha256-KPCx1LtxgvxDg1+2HTJmOsTa/4RY50LIik66MHuQJsw=",
         "owner": "grumnix",
         "repo": "libogg-win32",
-        "rev": "6cafd6a3608db0b47b8bcd3e8b0f1bda4c1f46f0",
+        "rev": "2587403e9b7da16d4f49b749f63d21e9bc0e703e",
         "type": "github"
       },
       "original": {
@@ -139,11 +140,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1660923805,
-        "narHash": "sha256-oI59MRrNeI7ueYG04VfHvBEXm1UeVudjyUfNWLNxdt8=",
+        "lastModified": 1687876017,
+        "narHash": "sha256-r0oc/l7kCR7+NtdOS7AIVRsvNQMj0d+iELTRsANtdC4=",
         "owner": "grumnix",
         "repo": "libvorbis-win32",
-        "rev": "1aabf677f7ec7ec5f29be2651f05e7163c0b1f2e",
+        "rev": "a91f6544eefdc69279cfc658eec26a6bca59acb5",
         "type": "github"
       },
       "original": {
@@ -166,16 +167,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1687729501,
-        "narHash": "sha256-mTLkMePoHUWvTCf3NuKbeYEea/tsikSIKBWwb9OfRr4=",
+        "lastModified": 1711668574,
+        "narHash": "sha256-u1dfs0ASQIEr1icTVrsKwg2xToIpn7ZXxW3RHfHxshg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "35130d4b4f0b8c50ed2aceb909a538c66c91d4a0",
+        "rev": "219951b495fc2eac67b1456824cc1ec1fd2ee659",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.05",
+        "ref": "nixos-23.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -214,11 +215,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1684952066,
-        "narHash": "sha256-yS8/+TOL2OA7f/RQs1Zr20mmlPFIVvFOgWShLAQvH8w=",
+        "lastModified": 1701699760,
+        "narHash": "sha256-L0vwqcTQFOiFfRY90nBgDuUsVOYS0+S8BfVxFvaFBNM=",
         "owner": "grumbel",
         "repo": "tinycmmc",
-        "rev": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "rev": "9a51e13802d930feb7261ba8876940659b258cb7",
         "type": "github"
       },
       "original": {
