@@ -142,11 +142,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712097214,
-        "narHash": "sha256-XMJBsdcBwD3amN/EfBReYkubozU0vV5lgwkFWQMLeAs=",
+        "lastModified": 1712097405,
+        "narHash": "sha256-TZdtYh2HUHaczKRkbfq4EOaGLTG7fOk7JOy7K1vZqMo=",
         "owner": "grumnix",
         "repo": "libvorbis-win32",
-        "rev": "35df01a826f38014969a549c341dbdfefe9ab41d",
+        "rev": "44265a9a7cf3dd811b826eede62653ed211b69de",
         "type": "github"
       },
       "original": {
